@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Xurshid.dev</title>
   </head>
   <body>
-    {% extends 'base.html' %}
+    <header>
+      <a href="{% url 'home' %}">Home Page</a>
+      <a href="{% url 'about' %}">Site About</a>
+    </header>
 
     {% block content %}
-      <h1>Home Page</h1>
-      <p>welcome to</p>
-    {% endblock %}
+    {% endblock content %}
   </body>
 </html>
