@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>News</title>
   </head>
   <body>
-    {% extends 'base.html' %}
-
-    {% block content %}
-      <h1>Home Page</h1>
-      <p>welcome to</p>
-    {% endblock %}
+    <h1>News Days</h1>
+    <ul>
+      {% for post in object_list %}
+        <li>
+          <h2>{{ post.title }}</h2><br />{{ post.text }}<br />
+        </li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
